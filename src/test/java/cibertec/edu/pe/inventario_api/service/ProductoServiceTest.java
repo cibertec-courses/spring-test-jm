@@ -73,6 +73,11 @@ public class ProductoServiceTest {
         Producto resultado = productoService.crear(producto);
 
         assertNotNull(resultado);
+        assertEquals("PROD001", resultado.getCodigo());
+        assertEquals(true, resultado.getActivo());
+        verify(productoRepository, times(1)).existsByCodigo("PROD001");
+        verify(productoRepository, times(1)).save(producto);
+
 
     }
 }
