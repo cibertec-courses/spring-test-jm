@@ -86,6 +86,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- JUnit Platform Suite -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Rest Assured para pruebas de API REST -->
         <dependency>
             <groupId>io.rest-assured</groupId>
@@ -102,9 +109,7 @@
             <artifactId>json-schema-validator</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
