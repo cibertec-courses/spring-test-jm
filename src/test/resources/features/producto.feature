@@ -18,7 +18,7 @@ Feature: Gestion de Prodcutos en el Inveratio
       And el codigo de respuesta es 201
       And el producto contiene "Laptop HP"
 
-    Scenario: Listar todo los productos
+    Scenario: Listar todos los productos
       Given existen los siguientes productos:
       | nombre      | codigo    | precio    | stock   | categoriaId   |
       | Laptop HP   | PROD001   | 2500.00   | 10      | 1             |
