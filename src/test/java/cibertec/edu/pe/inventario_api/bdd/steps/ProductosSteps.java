@@ -46,7 +46,7 @@ public class ProductosSteps extends CucumberSpringConfiguration {
                 .when()
                 .post(baseUrl+"/categorias")
                 .then()
-                .statusCode(anyOf(is(200), is(200)));
+                .statusCode(anyOf(is(201), is(200)));
     }
 
     // Scenario: Registrar un producto exitosamente
