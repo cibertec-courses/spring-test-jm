@@ -61,6 +61,7 @@ public class ProductosSteps extends CucumberSpringConfiguration {
                     "codigo": "%s",
                     "precio": %s,
                     "stock": %s,
+                    "stockMinimo": 1,
                     "categoria": {
                         "id": %s
                     }
@@ -70,7 +71,7 @@ public class ProductosSteps extends CucumberSpringConfiguration {
                 data.get("codigo"),
                 data.get("precio"),
                 data.get("stock"),
-                data.get("catgoriaId")
+                data.get("categoriaId")
         );
 
         response = given()
@@ -108,6 +109,7 @@ public class ProductosSteps extends CucumberSpringConfiguration {
                     "codigo": "%s",
                     "precio": %s,
                     "stock": %s,
+                    "stockMinimo": 1,
                     "categoria": {
                         "id": %s
                     }
@@ -117,7 +119,7 @@ public class ProductosSteps extends CucumberSpringConfiguration {
                     data.get("codigo"),
                     data.get("precio"),
                     data.get("stock"),
-                    data.get("catgoriaId")
+                    data.get("categoriaId")
             );
 
             given()
@@ -147,9 +149,10 @@ public class ProductosSteps extends CucumberSpringConfiguration {
         String productosJson = String.format("""
                 {
                     "nombre": "%s",
-                    "codigo": "PROD%3d",
+                    "codigo": "PROD%03d",
                     "precio": 100.00,
                     "stock": 10,
+                    "stockMinimo": 1,
                     "categoria": {
                         "id": 1
                     }
@@ -176,9 +179,10 @@ public class ProductosSteps extends CucumberSpringConfiguration {
         String productosJson = String.format("""
                 {
                     "nombre": "Producto Test",
-                    "codigo": "TEST%3d",
+                    "codigo": "TEST%03d",
                     "precio": 50.00,
                     "stock": 5,
+                    "stockMinimo": 1,
                     "categoria": {
                         "id": 1
                     }
